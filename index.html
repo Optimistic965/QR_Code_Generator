@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="./dist/css/styles.css">
+</head>
+<body>
+    <main>
+        <h1>QR Code Generator</h1>
+        <div id="alert"></div>
+        <div class="container">
+            <section class="form">
+                <input type="text" name="title" id="title" placeholder="QR Code Title" required>
+                <div>
+                    <select title="QR Width" name="width" id="width" required>
+                        <option value="100">100</option>
+                        <option value="200">200</option>
+                        <option value="300">300</option>
+                        <option value="400">400</option>
+                    </select>
+                    <select title="QR Height" name="height" id="height" required>
+                        <option value="100">100</option>
+                        <option value="200">200</option>
+                        <option value="300">300</option>
+                        <option value="400">400</option>
+                    </select>
+                </div>
+                <textarea name="text" id="qrtext" cols="30" rows="10" placeholder="What to be encrypted?"></textarea>
+                <button id="submit">Encrypt</button>
+            </section>
+            <section class="img">
+                <img src="" alt="" id="img">
+                <h3 id="qrt"></h3>
+            </section>
+        </div>
+
+        <footer>
+            <h4 >
+                <span class="developer">Developed</span>
+                <span class="developer">and</span>
+                <span class="developer">Designed</span>
+                <span class="developer">by</span>
+                <span class="developer">Ifeoluwa👽👽</span>
+            </h4>
+
+            <p>&copy; <span id="date"></span> AiQuad </p>
+        </footer>
+    </main>
+
+
+    <script src="./script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script>
+        let prop = {
+            duration: 5,
+            y: -30,
+            stagger: .41,
+            ease: 'bounce',
+            yoyoEase: 'bounce',
+            repeat: -1,
+        };
+
+        gsap.to('.developer', prop);
+    </script>
+</body>
+</html>
