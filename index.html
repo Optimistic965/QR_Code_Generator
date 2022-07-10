@@ -10,6 +10,7 @@
 <body>
     <main>
         <h1>QR Code Generator</h1>
+        <div id="alert"></div>
         <div class="container">
             <section class="form">
                 <input type="text" name="title" id="title" placeholder="QR Code Title" required>
@@ -44,8 +45,25 @@
                 <span class="developer">by</span>
                 <span class="developer">Ifeoluwa👽👽</span>
             </h4>
+
+            <p>&copy; <span id="date"></span> AiQuad </p>
         </footer>
     </main>
+
+
     <script src="./script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script>
+        let prop = {
+            duration: 5,
+            y: -30,
+            stagger: .41,
+            ease: 'bounce',
+            yoyoEase: 'bounce',
+            repeat: -1,
+        };
+
+        gsap.to('.developer', prop);
+    </script>
 </body>
 </html>

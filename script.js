@@ -6,7 +6,15 @@ let width = document.getElementById('width');
 let height = document.getElementById('height');
 let qrTitle = document.getElementById('title');
 let codeTitle = document.getElementById('qrt');
+let copyRtyDate = document.getElementById('date');
 
+
+const months = ["January","February","March","April","May","June","July","August","September","October","November","December"]
+const today = new Date().getFullYear();
+const todayMon = new Date().getMonth();
+
+let month = months[todayMon]
+copyRtyDate.innerText = `${month} ${today}`;
 
 
 button.addEventListener('click', doAll);
